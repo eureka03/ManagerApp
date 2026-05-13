@@ -16,8 +16,10 @@ export default function LoginForm(){
             password:passwordRef.current.value
         }
         alert("Form Submitted with data: " + JSON.stringify(User));
-       
+        formRef.current.reset();
     }
+    
+    
 
     return(
             <div className="FormContainer">
