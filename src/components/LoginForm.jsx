@@ -1,32 +1,30 @@
 
 import '../styles/LoginForm.css';
 import {Link} from 'react-router-dom';
-import { useState } from 'react';
+import { useRef } from 'react';
 
 export default function LoginForm(){
+    const usernameRef = useRef();
+    const passwordRef = useRef();
+    const formRef = useRef();
 
-    const [user,setUser] = useState({
-        name:'',
-        password:''
-    });
-
-    const handleChange =(e)=>{
-        setUser({...user, [e.target.name]: e.target.value});
-        console.log(user)
-
-    }
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        alert("Form Submitted with data:", user);
+        const User = {
+            username:usernameRef.current.value,
+            password:passwordRef.current.value
+        }
+        alert("Form Submitted with data: " + JSON.stringify(User));
+       
     }
 
     return(
             <div className="FormContainer">
-                <form onSubmit={handleSubmit}>
+                <form ref={formRef} onSubmit={handleSubmit}>
                     <h1>Login</h1>
-                    <input type="text" value={user.name} name="name" onChange={handleChange} placeholder="Username"/>
-                    <input type="password" value={user.password} name="password" onChange={handleChange} placeholder="Password"/>
+                    <input type="text" ref={usernameRef} name="name"  placeholder="Username"/>
+                    <input type="password" ref={passwordRef} name="password" placeholder="Password"/>
                     <button type="submit">Login</button>
                     <span>Forgot Password?<Link to='' className='ResetPasswordLink'> Reset Password</Link></span>
                 </form>
