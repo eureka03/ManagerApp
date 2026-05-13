@@ -1,0 +1,29 @@
+
+.list-parent{
+    display:flex;
+    list-style-type: none;
+    justify-content: end;
+    Padding-right:40px;
+    background-color: #4a90e2;
+    
+}
+
+.list-parent li{
+    margin: 20px;
+    
+}
+
+.list-parent li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.list-parent li a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
