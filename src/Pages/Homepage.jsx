@@ -1,9 +1,9 @@
-import Heading from '../components/Heading.jsx';
+
 
 export default function Homepage(){
     return(
         <div>
-            <Heading/>
+            <h1>Welcome to The ManagerApp</h1>
         </div>
     )
 }

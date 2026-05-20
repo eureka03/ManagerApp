@@ -1,9 +1,7 @@
-import ContactForm from "../components/ContactForm";
-import Heading from "../components/Heading";
+import ContactForm from "../Components/ContactForm";
 export default function Contact(){
     return(
         <div>
-            <Heading/>
             <ContactForm/>
 
         </div>
