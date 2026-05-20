@@ -3,8 +3,10 @@
     display:flex;
     list-style-type: none;
     justify-content: end;
-    Padding-right:40px;
-    background-color: #4a90e2;
+    Padding:30px 40px;
+    background-color: #8ab7ea;
+
+    
     
 }
 
