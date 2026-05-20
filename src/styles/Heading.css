@@ -5,11 +5,7 @@
     justify-content: end;
     Padding:30px 40px;
     background-color: #8ab7ea;
-
-    
-    
 }
-
 .list-parent li{
     margin: 20px;
     
@@ -19,7 +15,7 @@
     text-decoration: none;
     color: #fff;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: bold;
     letter-spacing: 0.3px;
     padding: 8px 12px;
     border-radius: 6px;
