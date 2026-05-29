@@ -1,12 +1,14 @@
 
-import '../styles/LoginForm.css';
-import {Link} from 'react-router-dom';
+import '../Styles/LoginForm.css';
+import {Link,useNavigate} from 'react-router-dom';
 import { useRef } from 'react';
 
-export default function LoginForm(){
+
+export default function LoginForm({setIsLoggedIn}){
     const usernameRef = useRef();
     const passwordRef = useRef();
     const formRef = useRef();
+    const navigate = useNavigate();
 
 
     const handleSubmit = (e)=>{
@@ -17,10 +19,12 @@ export default function LoginForm(){
         }
         alert("Form Submitted with data: " + JSON.stringify(User));
         formRef.current.reset();
-    }
-    
-    
+        setIsLoggedIn(true);
+        navigate('/');
 
+        
+
+    }
     return(
             <div className="FormContainer">
                 <form ref={formRef} onSubmit={handleSubmit}>

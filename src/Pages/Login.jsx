@@ -1,12 +1,11 @@
-import LoginForm from '../components/LoginForm.jsx';
-import Heading from '../components/Heading.jsx';
-import '../styles/Login.css';
+import LoginForm from '../Components/LoginForm.jsx';
+import '../Styles/Login.css';
 
-export default function Login(){
+export default function Login({setIsLoggedIn}){
     return(
         <div className="Login">
-            <Heading/>
-            <LoginForm/>
+            
+            <LoginForm setIsLoggedIn={setIsLoggedIn}/>
         </div>
 
     );
