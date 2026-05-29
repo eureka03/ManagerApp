@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Heading from '../components/Heading.jsx';
 import '../styles/Homepage.css';
 
@@ -12,14 +11,6 @@ export default function Homepage(){
 
                 </div>
             </div>
-=======
-import '../Styles/Homepage.css';
-
-export default function Homepage(){
-    return(
-        <div className="Homepage">
-            <h1 className="Homepage-heading">Welcome to The ManagerApp</h1>
->>>>>>> 93da128b5d82b5da986eca1b3c78decec1d5fad7
         </div>
     )
 }
