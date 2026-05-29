@@ -17,7 +17,7 @@ export default function Heading({isLoggedIn}) {
         );
     }
     return (
-        <div>
+        <div className='heading'>
             <ul className='list-parent'>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/about'>About</Link></li>
