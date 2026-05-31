@@ -1,4 +1,4 @@
-import '../Styles/Heading.css';
+import '../styles/Heading.css';
 import { Link } from 'react-router-dom';
 
 
@@ -6,7 +6,8 @@ export default function Heading({isLoggedIn}) {
     if(isLoggedIn){
         console.log(isLoggedIn);
         return(
-            <div>
+            <div className='heading'>
+                <h3>EUEU.co</h3>
                 <ul className='list-parent'>
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/about'>About</Link></li>
@@ -17,7 +18,8 @@ export default function Heading({isLoggedIn}) {
         );
     }
     return (
-        <div>
+        <div className='heading'>
+            <h3>EUEU.co</h3>
             <ul className='list-parent'>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/about'>About</Link></li>

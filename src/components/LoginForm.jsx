@@ -1,5 +1,5 @@
 
-import '../Styles/LoginForm.css';
+import '../styles/LoginForm.css';
 import {Link,useNavigate} from 'react-router-dom';
 import { useRef } from 'react';
 
