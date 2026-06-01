@@ -1,8 +1,12 @@
 import '../styles/Heading.css';
 import { Link } from 'react-router-dom';
+import { IoPersonOutline } from "react-icons/io5";
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthProvider.jsx';
 
 
-export default function Heading({isLoggedIn}) {
+export default function Heading() {
+    const {isLoggedIn} = useContext(AuthContext);
     if(isLoggedIn){
         console.log(isLoggedIn);
         return(
@@ -12,7 +16,7 @@ export default function Heading({isLoggedIn}) {
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/about'>About</Link></li>
                     <li><Link to='/contact'>Contact</Link></li>
-                    <li><Link to='#'>Profile</Link></li>
+                    <li><Link to='#'><IoPersonOutline /></Link></li>
                 </ul>
             </div>
         );

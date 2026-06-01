@@ -1,13 +1,17 @@
 import '../styles/LoginForm.css';
 import {Link,useNavigate} from 'react-router-dom';
 import { useRef } from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthProvider.jsx';
 
 
-export default function LoginForm({setIsLoggedIn}){
+
+export default function LoginForm(){
     const usernameRef = useRef();
     const passwordRef = useRef();
     const formRef = useRef();
     const navigate = useNavigate();
+    const {setIsLoggedIn} = useContext(AuthContext);
 
 
     const handleSubmit = (e)=>{
@@ -20,8 +24,6 @@ export default function LoginForm({setIsLoggedIn}){
         formRef.current.reset();
         setIsLoggedIn(true);
         navigate('/');
-
-        
 
     }
     return(
