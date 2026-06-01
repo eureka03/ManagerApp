@@ -1,4 +1,4 @@
-import Heading from '../components/Heading.jsx';
+
 import '../styles/Homepage.css';
 import homepageImage from '../assets/Homepage.jpg';
 
